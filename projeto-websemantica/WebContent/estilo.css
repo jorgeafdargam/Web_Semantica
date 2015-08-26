@@ -1,0 +1,133 @@
+*{
+	margin : 0;
+	padding : 0;
+}
+body{
+	margin-left:0px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	background-color:#ffffff;	
+}
+h1{
+	text-align:center;
+	color:#0445c9;
+}
+#centro{
+	position:relative;
+	width:100%;
+	z-index:200;
+}
+#principal{
+	 position:relative;
+	 z-index:200;
+	 top:31px;
+	 width:1200px;
+	 text-align:left;
+	 margin:0 auto;
+}
+.imagem{
+	position:absolute;
+	z-index:10016;
+	left:260px;
+	top:100px;
+	width:640px;
+	height:74px;
+	border:0px;
+}
+.secundario{
+	position:absolute;
+	z-index:10012;
+	left:335px;
+	top:240px;
+	width:480px;
+	height:70px;
+	border:0px;
+	background:rgba(0,0,0,0);
+	overflow:hidden; 
+}
+.secundario1{
+	height:220px;
+}
+.secundario2{
+	 position:absolute;
+	 z-index:10;
+	 line-height:1.2;
+	 margin:2px;
+	 top:0px;
+	 left:0px;
+	 width:478px;
+	 height:38px;
+	 word-wrap:break-word;
+	 overflow-y:auto;
+	 overflow-x:hidden;
+}
+span{
+	 font-family:Arial;
+	 font-size:23px;
+	 font-weight:normal;
+	 color:#0445c9;
+}
+.span1{
+	padding-left:100px;
+}
+.span2{
+	font-size:14px;
+	color:#000000;
+	cursor:pointer;
+	cursor:hand;
+}
+.botao{
+	position:absolute;
+	left:520px;
+	width:130px;
+	height:30px;
+	cursor:pointer;
+	text-decoration:none;
+}
+.botaoURI{
+	z-index:10004;
+	top:380px;
+}
+.botaoSPO{
+	z-index:10000;
+	top:320px;
+}
+.btn{
+	overflow: hidden; 
+	position:static;
+	margin:0px;
+	padding:0px;
+	width:130px;
+	height:30px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid #022265;
+	background:-webkit-gradient(linear,0 12, 0 30,from(#033497),to(#022265));
+	background:-moz-linear-gradient(top left 270deg,#033497 12px,#022265 30px);
+	text-align:center;
+	cursor:pointer;
+	font-weight:normal;
+	font-size:12px;
+	color:#ffffff;
+	font-family:Arial;
+}
+.btn1{
+	position:relative;
+	margin:0px;
+	padding:0px;
+	display: inline-block;
+	vertical-align:middle;
+	font-weight:normal;
+	font-size:12px;
+	color:#ffffff;
+	font-family:Arial;
+	text-decoration:none; 
+}
+
+
+
+
+
+
