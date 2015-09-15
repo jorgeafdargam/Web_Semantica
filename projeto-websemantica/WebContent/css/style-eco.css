@@ -1,0 +1,284 @@
+*{
+	border: 0 none;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+html {
+    background: none repeat scroll 0 0 #e9eef2;
+    height: 100%;
+}
+
+input {
+	background:#d3d7cf; 
+	border:1px solid #ff9900;
+}
+
+body{
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	height: 100%;
+	width: 1100px;
+	margin: auto;
+}
+
+.align_center {
+	text-align: center;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+	color: green;
+	width: 90%;
+}
+
+.conteudo{
+	
+}
+
+.header{
+}
+
+.cabeca{
+}
+
+.img_cabeca{
+    display: block;
+    height: 120px;
+    margin: 5px 0 2px 0; /* acima direita abaixo esquerda */
+    width: 100%;
+}
+
+.menuitens{
+	width: 100%;
+	height: 30px;
+	background-color: #e9eef2;
+	border-radius: 3px;
+}
+
+.menuitens ul{
+	display: block;
+}
+
+.menuitens li{
+	float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 100%;
+    position: relative;
+    vertical-align: middle;
+	margin-top: 5px;
+	width: 25%;
+}
+
+.menuitens a{
+	margin: 0 50px 0 150px;
+	font-size: 1em;
+	font-weight: bold;
+	color: #1b1f23;
+    	font-size: 16px;
+   	 font-weight: 700;
+   	 /* line-height: 46px; */
+   	 text-transform: uppercase;
+}
+
+.corpo {
+	width: 100%;
+}
+
+.col_1{
+	width: 100%;
+	margin: auto;
+	height: 30px;
+}
+
+.col_11 p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.col_1 p{
+	text-align: right;
+}
+
+.col_1 a{
+	padding-right: 30px;;
+}
+
+.col_1_art{
+	width: 33%;
+	margin: auto;
+	float: left;
+}
+
+.col_1 li{
+}
+
+.col_1 img{
+}
+
+/* redimensiona o tamanho de todas as imagens (logos) */
+.img_size{
+	width: 62px;
+	height: 65px;
+}
+
+.img_size2{
+	width: 120px;
+	height: 55px;
+}
+
+/* espaçamento lateral esquerdo das imagens (logos) no rodapé */
+.col_22 img{
+	margin-left: 7px;
+}
+
+.col_2{
+	width: 50%;
+	margin: auto;
+	float: left;
+}
+
+.col_2 img {
+	margin-left: 5px;
+	width: 110px;
+	display: block;
+	height: 90px;
+}
+
+.col_2_art{
+	width: 34%;
+	margin: auto;
+	float: left;
+}
+
+.col_21{
+	background-color: #ffffff;
+	height: 100px;
+	margin: 5px 5px 5px 5px;
+}
+
+.col_211{
+	background-color: #ffffff;
+	height: 500px;
+	margin: 5px 5px 5px 5px;
+}
+
+.col_2111{
+	background-color: #ffffff;
+	height: 500px;
+	margin: 5px 5px 5px 5px;
+}
+
+.col_2_1{    /* div de fundo */
+	width:1100px;
+	height: 500px;
+	background-color: #ffffff;
+	background-image: url("./imagens/cerebro.jpg"); 
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 900px 600px;
+	position:absolute;
+	/* Regras para opacidade crossbrowser */
+		opacity: .1; /* Navegadores padrão */
+		filter: alpha(opacity=50); /* IE 7 e anteriores */
+		/* IE8 */
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); 
+}
+
+.col_2_2{ /* div de texto */
+	width: 1100px;
+	height: 500px;
+	position:relative;
+	color:black;
+	font-weight:bold;
+}
+
+.img_21{
+	margin: 5px auto;
+	width: 590px;
+	display: block;
+	height: 400px;
+}
+
+.col_22{
+}
+
+.col_22 li{
+	float: left;
+}
+
+.col_3{
+	width: 50%;
+	margin: auto;
+	float: left;
+}
+
+.col_3 ul{
+}
+
+.col_3 li{
+}
+
+.col_3 img{
+}
+
+.col_3 p{
+}
+
+.col_33{
+	float: right;
+}
+
+.footer{
+	clear: both;
+	font-size: 10px;
+}
+
+.titulo{
+	text-align: center;
+	font-size: xx-large;
+	text-decoration: underline;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+.titulo_sub{
+	text-align: center;
+}
+
+.titulo_art {
+	text-align: left;
+	font-size: 12px;
+	text-decoration: underline;
+	letter-spacing: 0;
+}
+
+.texto_art {
+	text-align: left;
+	font-size: 12px;
+}
+
+
+.bloco {
+	float: left;
+	width: 33%;
+	display: block;
+}
+
+.col_1_loja {
+
+}
+
+.col_1_1_loja {
+	
+}
+

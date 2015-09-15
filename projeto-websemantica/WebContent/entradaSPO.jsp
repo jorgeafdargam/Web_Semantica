@@ -20,28 +20,31 @@
 
 			<div class="secundario secundario1">
 				<div class="secundario2">
-					<span class="span span1">Entre com os dados da busca no dataset <%=request.getAttribute("arquivo") %> :</span>
+					<span class="span">Entre com os dados da busca no dataset:</span>
+					<span class="span"><%=request.getAttribute("arquivo") %></span>
 				</div>
 				<br> <br> <br> <br>
 				<form action="busca">
 					<p>Sujeito:</p>
-					<select>
+					<select name="sujeito" id="sujeito" >
 						<c:forEach var="sujeito" items="${requestScope.sujeito}">
-							<option value="${sujeito}">${sujeito}</option>
+							<option value="${sujeito}" >${sujeito}</option>
 						</c:forEach>
 					</select> <br />
 					<p>Predicado:</p>
-					<select>
+					<select name="predicado" id="predicado">
 						<c:forEach var="predicado" items="${requestScope.predicado}">
 							<option value="${predicado}">${predicado}</option>
 						</c:forEach>
 					</select> <br />
 					<p>Objeto:</p>
-					<select>
+					<select name="objeto" id="objeto">
 						<c:forEach var="objeto" items="${requestScope.objeto}">
 							<option value="${objeto}">${objeto}</option>
 						</c:forEach>
-					</select> <br /> <br /> <input type="submit" class="btn btn1" value="BUSCAR" /> <input
+					</select> 
+					<input type="hidden" name="uri" value="">
+					<br /> <br /> <input type="submit" class="btn btn1" value="BUSCAR" /> <input
 						type="reset" class="btn btn1" value="LIMPAR" /> <input
 						type="button" class="btn btn1"
 						onClick="location.href='http://localhost:8080/projeto-websemantica/entradaBusca.jsp'"
