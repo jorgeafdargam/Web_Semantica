@@ -24,6 +24,7 @@ public class LeituraController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static ConfiguracoesBeans configuracoes;
 	
+	// ponto de acesso àss configurações
 	public static ConfiguracoesBeans getConfiguracoes(){
 		return configuracoes;
 	}

@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonMontador {
+	// obtem as configurações do sistema
+	ConfiguracoesBeans configuracoes = LeituraController.getConfiguracoes();
 
 	private JsonBean json;
 	// ArrayList virt é uma lista de objetos BuscaBean
@@ -33,7 +35,9 @@ public class JsonMontador {
 	
 	// gerar o arquivo json de saída
 	// cria um arquivo JSON para escrita, o false indica que sobrescreve o arquivo existente
-	FileWriter escrita = new FileWriter("/var/www/html/arbor/demos/halfviz/library/search.json",false);
+	String caminho = configuracoes.getCaminhoJson();
+	String nomejson = configuracoes.getNomeJson();
+	FileWriter escrita = new FileWriter(caminho + nomejson,false);
 	// abre buffer de memória para escrita que será transferido direto para o arquivo criado acima
 	BufferedWriter bE = new BufferedWriter(escrita);
 	// cabeçalho do arquivo json
