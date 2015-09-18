@@ -2,13 +2,13 @@ package br.com.websemantica;
 
 public class JsonBean {
 	
-	private String caminho;
-	private String nome;
+	private String caminho = "/var/www/html/arbor/demos/halfviz/library/";
+	private String nome = "search.json";
 	private String cabecalho1 = "{\"_id\":\"third-planet-from-altair\",\"_rev\":\"1-ee5599bcde8a1592f71eb00281360dd6\",\"sys\":{";
 	private String cabecalho;
-	private String cor_sujeito;
-	private String cor_predicado;
-	private String cor_objeto;
+	private String cor_sujeito = "green";
+	private String cor_predicado = "red";
+	private String cor_objeto = "yellow";
 	private int tensao = 512;
 	private int repulsao = 2600;
 	private double friccao = 0.5;
