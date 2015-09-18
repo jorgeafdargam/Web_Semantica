@@ -2,8 +2,7 @@
     <wb-module deploy-name="projeto-websemantica">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes/" source-path="/ImportedClasses"/>
-        <property name="java-output-path" value="/projeto-websemantica/build/classes"/>
         <property name="context-root" value="projeto-websemantica"/>
+        <property name="java-output-path" value="/projeto-websemantica/build/classes"/>
     </wb-module>
 </project-modules>

@@ -1,17 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-oracle">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JenaLibs"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/virtjdbc4.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/virt_jena2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/catalina-storeconfig.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/ecj-4.4.2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-jni.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-util-scan.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/tomcat-websocket.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/tomcat/lib/websocket-api.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-oracle">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/commons-csv-1.0.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/httpclient-4.2.6.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/httpclient-cache-4.2.6.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/httpcore-4.2.5.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jackson-annotations-2.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jackson-core-2.3.3.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jackson-databind-2.3.3.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jcl-over-slf4j-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jena-arq-2.13.0.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jena-core-2.13.0.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jena-iri-1.1.2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jena-tdb-1.1.2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/jsonld-java-0.5.1.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/libthrift-0.9.2.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/slf4j-log4j12-1.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="/home/dell/Documentos/bibliotecas/jena_lib/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
