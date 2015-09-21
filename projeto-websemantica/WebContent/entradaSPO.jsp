@@ -5,13 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7;IE=EmulateIE9" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta content='initial-scale=1.0' name='viewport' />
+<meta charset="UTF-8"> 
 <title>Busca SPO</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
 	<div id="centro">
@@ -20,8 +16,8 @@
 
 			<div class="secundario secundario1">
 				<div class="secundario2">
-					<span class="span">Entre com os dados da busca no dataset:</span>
-					<span class="span"><%=request.getAttribute("arquivo") %></span>
+					<span class="span">Escolha abaixo as combinações de busca no dataset:</span><br/>
+					<p class="align_center"><span class="span"><%=request.getAttribute("arquivo") %></span></p>
 				</div>
 				<br> <br> <br> <br>
 				<form action="busca">
@@ -44,11 +40,14 @@
 						</c:forEach>
 					</select> 
 					<input type="hidden" name="uri" value="">
-					<br /> <br /> <input type="submit" class="btn btn1" value="BUSCAR" /> <input
+					<br /> <br /> 
+					<p class="align_center">
+					<input type="submit" class="btn btn1" value="BUSCAR" /> <input
 						type="reset" class="btn btn1" value="LIMPAR" /> <input
 						type="button" class="btn btn1"
 						onClick="location.href='http://localhost:8080/projeto-websemantica/entradaBusca.jsp'"
 						value="VOLTAR" />
+					</p>
 				</form>
 			</div>
 		</div>
