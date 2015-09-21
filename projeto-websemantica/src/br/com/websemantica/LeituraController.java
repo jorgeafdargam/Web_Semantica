@@ -69,6 +69,15 @@ public class LeituraController extends HttpServlet {
 		// recebe nome do arquivo json de saída
 		String jsonArch = request.getParameter("inpuFileOut");
 		configuracoes.setNomeJson(jsonArch);
+		// recebe cor do sujeito
+		String corsuj = request.getParameter("inputColorSuj");
+		configuracoes.setCor_sujeito(corsuj);
+		// recebe cor do predicado
+		String corpred = request.getParameter("inputColorPred");
+		configuracoes.setCor_predicado(corpred);
+		// recebe cor do objeto
+		String corobj = request.getParameter("inputColorObj");
+		configuracoes.setCor_objeto(corobj);
 
 		// le arquivo
 		FileReader leitura = new FileReader(path + nome_arq);

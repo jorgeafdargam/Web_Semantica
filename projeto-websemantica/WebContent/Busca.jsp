@@ -30,7 +30,13 @@
 <label>Especifique o caminho do arquivo json de saída</label><br/>
 <input type="text"  name="inputPathOut" value="/opt/lampp/htdocs/arbor/demos/halfviz/library/" size ="40"> <br/>
 <label>Especifique o nome do arquivo json de saída</label><br/>
-<input type="text"  name="inpuFileOut" value="third-planet-from-altair2.json" size ="40"> <br/><br/>
+<input type="text"  name="inpuFileOut" value="third-planet-from-altair2.json" size ="40"> <br/>
+<label>Especifique a cor exibida pelo sujeito:</label><br/>
+<input type="text"  name="inputColorSuj" value="green" size ="40"> <br/>
+<label>Especifique a cor exibida pelo predicado:</label><br/>
+<input type="text"  name="inputColorPred" value="red" size ="40"> <br/>
+<label>Especifique a cor exibida pelo objeto:</label><br/>
+<input type="text"  name="inputColorObj" value="grey" size ="40"> <br/><br/>
 
 <p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p><br/>
 <label>Especifique a porta utilizada pelo BD Virtuoso</label><br/>
@@ -54,7 +60,9 @@
 					<p>- Indique o nome do seu arquivo dataset. Exemplo: geonames_links.nt</p><br/>
 					<p class="align_center">CONFIGURAÇÕES DO ARQUIVO JSON DE SAÍDA</p>
 					<p>- Indique o caminho do seu arquivo json que irá gerar o gráfico. O arquivo deverá estar na pasta /arbor/demos/halfviz/library/ do framework Arbor.js. Exemplo em ambiente Linux: /var/www/html/arbor/demos/halfviz/library/</p>
-					<p>- Indique o nome do seu arquivo json. Exemplo: texto.json</p><br/>
+					<p>- Indique o nome do seu arquivo json. Exemplo: texto.json</p>
+					<p>- Indique as cores, em formato texto ou hexadecimal, do sujeito, predicado e objeto a ser exibidas no gráfico. Exemplo: red ou #F50824</p>
+					<p>- Clique <a href="http://html-color-codes.info/Codigos-de-Cores-HTML/" target="_blank">aqui</a> para acessar um aplicativo que fornece o código hexadecimal das cores.</p>
 					<p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p>
 					<p>- Clique <a href="http://localhost:8890/" target="_blank">aqui</a> para verificar se seu BD Virtuoso está inicializado.</p>
 					<p>- Indique a porta utilizada pelo BD Virtuoso. A porta padrão é 1111.</p>
