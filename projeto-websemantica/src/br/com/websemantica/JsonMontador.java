@@ -31,6 +31,7 @@ public class JsonMontador {
 	bE.write("{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":2600,\"friction\":0.5,\"stiffness\":512,\"gravity\":true},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n; by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n");
 	// escreve sujeito no arquivo JSON de saída
 	for (BuscaBean tripla : virt) {
+		// atribuição de relacionamentos
 		bE.write(tripla.getSujeito());
 		bE.write(" -> ");
 		bE.write(tripla.getPredicado());
@@ -39,6 +40,13 @@ public class JsonMontador {
 		bE.write(" -> ");
 		bE.write(tripla.getObjeto());
 		bE.write("\\n");
+		// atribuição de cores
+		bE.write(tripla.getSujeito());
+		bE.write(" {color:" + configuracoes.getCor_sujeito() + "}\\n");
+		bE.write(tripla.getPredicado());
+		bE.write(" {color:" + configuracoes.getCor_predicado() + "}\\n");
+		bE.write(tripla.getObjeto());
+		bE.write(" {color:" + configuracoes.getCor_objeto() + "}\\n\\n");
 	}
 	// rodapé do arquivo json
 	bE.write("\\n; endings\\n\"}");

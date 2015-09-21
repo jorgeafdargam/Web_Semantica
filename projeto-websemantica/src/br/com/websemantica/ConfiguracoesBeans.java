@@ -17,7 +17,7 @@ public class ConfiguracoesBeans {
 	private String cabecalho;
 	private String cor_sujeito = "green";
 	private String cor_predicado = "red";
-	private String cor_objeto = "yellow";
+	private String cor_objeto = "gray";
 	private int tensao = 512;
 	private int repulsao = 2600;
 	private double friccao = 0.5;
