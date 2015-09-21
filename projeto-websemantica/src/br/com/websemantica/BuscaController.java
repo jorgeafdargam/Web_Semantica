@@ -50,7 +50,6 @@ public class BuscaController extends HttpServlet{
 			virt = dao.consulta1(sujeito);
 		}
 		
-		
 		//Busca por predicado
 		if(sujeito.equals("") && !predicado.equals("") && objeto.equals("") && uri.equals("")){
 			virt = dao.consulta2(predicado);
@@ -83,53 +82,18 @@ public class BuscaController extends HttpServlet{
 			if(!sujeito.equals("") && predicado.equals("") && !objeto.equals("") && uri.equals("")){
 				virt = dao.consulta(sujeito, predicado, objeto);
 			}
+			
 		//Busca por predicado e objeto
 			if(sujeito.equals("") && !predicado.equals("") && !objeto.equals("") && uri.equals("")){
 				virt = dao.consulta(sujeito, predicado, objeto);
 			}
+			
 		//Busca por uri
 				if(sujeito.equals("") && predicado.equals("") && objeto.equals("") && !uri.equals("")){
 				virt = dao.consultaUri(uri);
 				}
 		
-		/* TESTE
-		// virt contém o resultado da busca
-				System.out.println( "Número de objetos BuscaBean no arraylist (virt) do resultado da busca: " + virt.size() );
-				System.out.println( "Triplas contidas no objeto BuscaBean" );
-				for (BuscaBean tripla : virt) {
-					System.out.println( "Sujeito: " + tripla.getSujeito() );
-					System.out.println( "Predicado: " + tripla.getPredicado() );
-					System.out.println( "Objeto: " + tripla.getObjeto() );
-				}
-		*/
-		
-		ConfiguracoesBeans configuracoes = LeituraController.getConfiguracoes();
-		String caminho = configuracoes.getCaminhoJson();
-		String arquivo = configuracoes.getNomeJson();
-		// gerar o arquivo json de saída
-		// cria um arquivo JSON para escrita, o false indica que sobrescreve o arquivo existente
-		FileWriter escrita = new FileWriter(caminho + arquivo,false);
-		// abre buffer de memória para escrita que será transferido direto para o arquivo criado acima
-		BufferedWriter bE = new BufferedWriter(escrita);
-		// cabeçalho do arquivo json
-		bE.write("{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":1467,\"friction\":0.5,\"stiffness\":74,\"gravity\":true},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n;by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n");
-		// escreve sujeito no arquivo JSON de saída
-		for (BuscaBean tripla : virt) {
-			bE.write(tripla.getSujeito());
-			bE.write(" -> ");
-			bE.write(tripla.getPredicado());
-			bE.write("\\n");
-			bE.write(tripla.getPredicado());
-			bE.write(" -> ");
-			bE.write(tripla.getObjeto());
-			bE.write("\\n");
-		}
-		// rodapé do arquivo json
-		bE.write("\\n; endings\\n\"}");
-		// encerra buffer de escrita do arquivo json de saída
-		bE.close();
-		// encerra o acesso ao arquivo json de saída
-		escrita.close();
+		JsonMontador montador = new JsonMontador(virt);
 		
 		request.setAttribute("lista", virt);
 		RequestDispatcher rd = request.getRequestDispatcher("/saida.jsp");  

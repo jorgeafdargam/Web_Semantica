@@ -7,7 +7,7 @@ public class VirtuosoConn {
 	// Variável estática que conterá a instância do método
 	private static VirtuosoConn conn;
 	
-	VirtGraph set = new VirtGraph ("jdbc:virtuoso://localhost:1111", "dba", "dba");;
+	
 	
 	// Construtor privado. Suprime o construtor público padrão
 	private VirtuosoConn(){}
@@ -35,7 +35,7 @@ public class VirtuosoConn {
 			}
 		}	
 		
-		public VirtGraph getConn(){
+		public static VirtGraph getConn(){
 			return set;
 		}
 }

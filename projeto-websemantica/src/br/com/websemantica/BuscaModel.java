@@ -19,6 +19,7 @@ import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
 import br.com.websemantica.ConfiguracoesBeans;
 
 public class BuscaModel {
+	
 	ConfiguracoesBeans configuracoes = LeituraController.getConfiguracoes();
 	private int porta = configuracoes.getPortaVirtuoso();
 	private String usuario = configuracoes.getUserVirtuoso(); 
@@ -26,6 +27,8 @@ public class BuscaModel {
 	
 	//Conecta o virtuoso
 	VirtGraph set = new VirtGraph ("jdbc:virtuoso://localhost:" + porta, usuario, senha);
+	
+	
 	// nome do grafo no BD Virtuoso
 	String banco = "<geonames>";
 	
