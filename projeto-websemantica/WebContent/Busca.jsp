@@ -9,7 +9,7 @@
 				<% 
 					long hora = session.getCreationTime();
 					Date agora = new Date(hora); 
-					Format formato = new SimpleDateFormat("EEEE, dd 'de' MMMM 'de' yyyy ' - ' hh:mm:ss");
+					Format formato = new SimpleDateFormat("EEEE, dd 'de' MMMM 'de' yyyy ' - ' H:mm:ss z");
 					String data_hora = formato.format(agora);
 				%>
 				<%=data_hora%>
