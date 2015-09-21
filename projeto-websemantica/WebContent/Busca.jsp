@@ -31,22 +31,19 @@
 <input type="text"  name="inputPathOut" value="/opt/lampp/htdocs/arbor/demos/halfviz/library/" size ="40"> <br/>
 <label>Especifique o nome do arquivo json de saída</label><br/>
 <input type="text"  name="inpuFileOut" value="third-planet-from-altair2.json" size ="40"> <br/>
-<label>Especifique a cor exibida pelo sujeito:</label><br/>
-<input type="text"  name="inputColorSuj" value="green" size ="40"> <br/>
-<label>Especifique a cor exibida pelo predicado:</label><br/>
-<input type="text"  name="inputColorPred" value="red" size ="40"> <br/>
-<label>Especifique a cor exibida pelo objeto:</label><br/>
-<input type="text"  name="inputColorObj" value="grey" size ="40"> <br/>
-<label>Especifique se a gravidade será aplicada:</label><br/>
-<input type="text"  name="inputGravidade" value="true" size ="40"> <br/><br/><br/>
+<label>Especifique as identificações por cores:</label><br/>
+<label>Sujeito: </label><input type="text"  name="inputColorSuj" value="green" size ="10"> 
+<label>Predicado: </label><input type="text"  name="inputColorPred" value="red" size ="10"> 
+<label>Objeto: </label><input type="text"  name="inputColorObj" value="grey" size ="10"> <br/>
+<label>Caso a caixa ao lado esteja marcada a gravidade será aplicada: </label><input type="checkbox"  name="inputGravidade" value="true" checked> <br/><br/><br/>
 
 <p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p><br/>
-<label>Especifique a porta utilizada pelo BD Virtuoso</label><br/>
-<input type="text"  name="inputPorta" value="1111" size ="40"> <br/>
-<label>Especifique o usuário de acesso ao BD Virtuoso </label><br/>
-<input type="text"  name="inputUser" value="dba" size ="40"> <br/>
-<label>Especifique a senha de acesso ao BD Virtuoso </label><br/>
-<input type="password"  name="inputPassword" value="dba" size ="40"> <br/><br/>
+<label>Especifique a porta utilizada pelo BD Virtuoso: </label>
+<input type="text"  name="inputPorta" value="1111" size ="10"> <br/>
+<label>Especifique o usuário de acesso ao BD Virtuoso: </label>
+<input type="text"  name="inputUser" value="dba" size ="10"> <br/>
+<label>Especifique a senha de acesso ao BD Virtuoso: </label>
+<input type="password"  name="inputPassword" value="dba" size ="10"> <br/><br/>
 
 <p class="align_center"><input type="submit" value="ENVIAR"></p>
 </form>

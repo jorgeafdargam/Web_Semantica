@@ -21,7 +21,7 @@ public class ConfiguracoesBeans {
 	private int tensao = 512;
 	private int repulsao = 2600;
 	private double friccao = 0.5;
-	private String gravidade = "true";
+	private String gravidade = "false";
 	
 	public String getNomeDataset() {
 		return nomeDataset;
