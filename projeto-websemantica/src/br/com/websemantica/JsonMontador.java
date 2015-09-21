@@ -28,7 +28,7 @@ public class JsonMontador {
 	// abre buffer de memória para escrita que será transferido direto para o arquivo criado acima
 	BufferedWriter bE = new BufferedWriter(escrita);
 	// cabeçalho do arquivo json
-	bE.write("{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":" + configuracoes.getRepulsao() + ",\"friction\":" + configuracoes.getFriccao() + ",\"stiffness\":" + configuracoes.getTensao() + ",\"gravity\":true},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n; by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n");
+	bE.write("{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":" + configuracoes.getRepulsao() + ",\"friction\":" + configuracoes.getFriccao() + ",\"stiffness\":" + configuracoes.getTensao() + ",\"gravity\":true},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n; by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n; Código das cores:\\n; Sujeito: " + configuracoes.getCor_sujeito() + "\\n; Predicado: " + configuracoes.getCor_predicado() + "\\n; Objeto: " + configuracoes.getCor_objeto() + "\\n\\n");
 	// escreve sujeito no arquivo JSON de saída
 	for (BuscaBean tripla : virt) {
 		// atribuição de relacionamentos

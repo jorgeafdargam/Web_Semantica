@@ -42,17 +42,20 @@ public class BuscaController extends HttpServlet{
 		
 		//Busca por sujeito, predicado e objeto
 		if(!sujeito.equals("") && !predicado.equals("") && !objeto.equals("") && uri.equals("")){
-		virt = dao.consulta(sujeito, predicado, objeto);
+			virt = dao.consulta(sujeito, predicado, objeto);
+			JsonMontador montador = new JsonMontador(virt);
 		}
 		
 		//Busca por sujeito
 		if(!sujeito.equals("") && predicado.equals("") && objeto.equals("") && uri.equals("") ){
 			virt = dao.consulta1(sujeito);
+			JsonMontador montador = new JsonMontador(virt);
 		}
 		
 		//Busca por predicado
 		if(sujeito.equals("") && !predicado.equals("") && objeto.equals("") && uri.equals("")){
 			virt = dao.consulta2(predicado);
+			JsonMontadorPredicado montador = new JsonMontadorPredicado(virt);
 		}
 		
 		//Busca por objeto
@@ -71,21 +74,25 @@ public class BuscaController extends HttpServlet{
 			}else{
 				virt = dao.consulta31(objeto);
 			}
+			JsonMontador montador = new JsonMontador(virt);
 		}
 		
 		//Busca por sujeito e predicado
 			if(!sujeito.equals("") && !predicado.equals("") && objeto.equals("") && uri.equals("")){
 				virt = dao.consulta(sujeito, predicado, objeto);
+				JsonMontador montador = new JsonMontador(virt);
 			}
 		
 		//Busca por sujeito e objeto
 			if(!sujeito.equals("") && predicado.equals("") && !objeto.equals("") && uri.equals("")){
 				virt = dao.consulta(sujeito, predicado, objeto);
+				JsonMontador montador = new JsonMontador(virt);
 			}
 			
 		//Busca por predicado e objeto
 			if(sujeito.equals("") && !predicado.equals("") && !objeto.equals("") && uri.equals("")){
 				virt = dao.consulta(sujeito, predicado, objeto);
+				JsonMontador montador = new JsonMontador(virt);
 			}
 			
 		//Busca por uri
@@ -93,7 +100,7 @@ public class BuscaController extends HttpServlet{
 				virt = dao.consultaUri(uri);
 				}
 		
-		JsonMontador montador = new JsonMontador(virt);
+		// JsonMontador montador = new JsonMontador(virt);
 		
 		request.setAttribute("lista", virt);
 		RequestDispatcher rd = request.getRequestDispatcher("/saida.jsp");  
