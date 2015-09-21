@@ -24,7 +24,7 @@ public class LeituraController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static ConfiguracoesBeans configuracoes;
 	
-	// ponto de acesso àss configurações
+	// ponto de acesso às configurações
 	public static ConfiguracoesBeans getConfiguracoes(){
 		return configuracoes;
 	}
@@ -78,15 +78,14 @@ public class LeituraController extends HttpServlet {
 		// recebe cor do objeto
 		String corobj = request.getParameter("inputColorObj");
 		configuracoes.setCor_objeto(corobj);
+		// recebe aplicação da gravidade
+		String gravidade = request.getParameter("inputGravidade");
+		configuracoes.setGravidade(gravidade);
 
 		// le arquivo
 		FileReader leitura = new FileReader(path + nome_arq);
 		// insere o arquivo no buffer de memória
 		BufferedReader bL = new BufferedReader(leitura);
-		// cria um arquivo JSON para escrita, o false indica que sobrescreve o arquivo existente
-		FileWriter escrita = new FileWriter(jsonPath + jsonArch,false);
-		// abre buffer de memória para escrita que será transferido direto para o arquivo criado acima
-		BufferedWriter bE = new BufferedWriter(escrita);
 		
 		// cria um HashSet de Strings, a diferença é performance e não permite elementos duplicados
 		HashSet<String> listaNomes = new HashSet<String>(); // arquivo completo
@@ -102,12 +101,9 @@ public class LeituraController extends HttpServlet {
 		listaNomes_pred.add(predicado);
 		listaNomes_obj.add(objeto);
 		
-		// cabeçalho do arquivo json
-		bE.write("{\"_id\":\"third-planet-from-altair\",\"_rev\":\"1-ee5599bcde8a1592f71eb00281360dd6\",\"sys\":{\"repulsion\":2600,\"friction\":0.5,\"stiffness\":512,\"gravity\":true},\"src\":\";\\n;\\n;\\n;\\n;\\n;\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; Jorge Antonio F. Dargam\\n; Marcio Pacheco de Lima\\n\\n; Mecanismo de busca em dados \\n; dispostos em ontologia semântica\\n; \\n; Identificação das cores: \\n;  Vermelho: Sujeito \\n;  Amarelo: Predicado \\n;  Azul: Objeto \\n \\n; relacionamentos:\\n ");
-		
-		//while (true) {
+		//ATENÇÃO!
 		int y=0;
-		while (y <= 20) {
+		while (y <= 20) { // para que o programa funcione por completo substitua por while (true) {
 			y++;
 			// lê linha do arquivo no buffer de memória
 			String l = bL.readLine();
@@ -124,30 +120,12 @@ public class LeituraController extends HttpServlet {
 			listaNomes_suj.add(sujeito);
 			listaNomes_pred.add(predicado);
 			listaNomes_obj.add(objeto);
-			// adiciona no arquivo o sujeito, predicado e objeto
-			bE.write(sujeito);
-			bE.write(" -> ");
-			bE.write(predicado);
-			bE.write("\\n");
-			bE.write(predicado);
-			bE.write(" -> ");
-			bE.write(objeto);
-			bE.write("\\n");
 		}
-		// rodapé do arquivo JSON
-		bE.write("\",\"example\":\"cyoa\",\"title\":\"Third Planet from Altair\"}");
+		
 		// encerra buffer de memória
 		bL.close();
 		// encerra o acesso ao arquivo
 		leitura.close();
-		// encerra buffer de escrita
-		bE.close();
-		// encerra o acesso ao arquivo
-		escrita.close();
-		// imprime o array
-		System.out.println(listaNomes_suj);
-		System.out.println(listaNomes_pred);
-		System.out.println(listaNomes_obj);
 		
 		request.setAttribute("sujeito", listaNomes_suj);
 		request.setAttribute("predicado", listaNomes_pred);

@@ -30,11 +30,6 @@ public class BuscaController extends HttpServlet{
 		if (predicado.equals(" ")) predicado = "";
 		if (objeto.equals(" ")) objeto = "";
 		
-		System.out.println("Dentro da classe BuscaController " );
-		System.out.println("Sujeito: " + sujeito );
-		System.out.println("Predicado: " + predicado );
-		System.out.println("Objeto: " + objeto );
-		
 		// Busca no Virtuoso
 		BuscaModel dao = new BuscaModel();
 		// ArrayList virt é uma lista de objetos BuscaBean
@@ -100,11 +95,8 @@ public class BuscaController extends HttpServlet{
 				virt = dao.consultaUri(uri);
 				}
 		
-		// JsonMontador montador = new JsonMontador(virt);
-		
 		request.setAttribute("lista", virt);
 		RequestDispatcher rd = request.getRequestDispatcher("/saida.jsp");  
 		rd.forward(request, response); 
-		
 	}
 }

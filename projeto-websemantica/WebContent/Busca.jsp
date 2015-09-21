@@ -36,7 +36,9 @@
 <label>Especifique a cor exibida pelo predicado:</label><br/>
 <input type="text"  name="inputColorPred" value="red" size ="40"> <br/>
 <label>Especifique a cor exibida pelo objeto:</label><br/>
-<input type="text"  name="inputColorObj" value="grey" size ="40"> <br/><br/>
+<input type="text"  name="inputColorObj" value="grey" size ="40"> <br/>
+<label>Especifique se a gravidade será aplicada:</label><br/>
+<input type="text"  name="inputGravidade" value="true" size ="40"> <br/><br/><br/>
 
 <p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p><br/>
 <label>Especifique a porta utilizada pelo BD Virtuoso</label><br/>

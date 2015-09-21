@@ -13,15 +13,15 @@ public class ConfiguracoesBeans {
 	private String passwordVirtuoso;
 	private String grafoVirtuoso = "<geonames>";
 	
-	private String cabecalho1 = "{\"_id\":\"third-planet-from-altair\",\"_rev\":\"1-ee5599bcde8a1592f71eb00281360dd6\",\"sys\":{";
 	private String cabecalho;
+	private String rodape;
 	private String cor_sujeito = "green";
 	private String cor_predicado = "red";
 	private String cor_objeto = "gray";
 	private int tensao = 512;
 	private int repulsao = 2600;
 	private double friccao = 0.5;
-	private boolean gravidade = true;
+	private String gravidade = "true";
 	
 	public String getNomeDataset() {
 		return nomeDataset;
@@ -71,17 +71,9 @@ public class ConfiguracoesBeans {
 	public void setGrafoVirtuoso(String grafoVirtuoso) {
 		this.grafoVirtuoso = grafoVirtuoso;
 	}
-	public String getCabecalho1() {
-		return cabecalho1;
-	}
-	public void setCabecalho1(String cabecalho1) {
-		this.cabecalho1 = cabecalho1;
-	}
 	public String getCabecalho() {
+		cabecalho = "{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":" + repulsao + ",\"friction\":" + friccao + ",\"stiffness\":" + tensao + ",\"gravity\":" + gravidade + "},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n; by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n; Código das cores:\\n; Sujeito: " + cor_sujeito + "\\n; Predicado: " + cor_predicado + "\\n; Objeto: " + cor_objeto + "\\n\\n";
 		return cabecalho;
-	}
-	public void setCabecalho(String cabecalho) {
-		this.cabecalho = cabecalho;
 	}
 	public String getCor_sujeito() {
 		return cor_sujeito;
@@ -119,10 +111,17 @@ public class ConfiguracoesBeans {
 	public void setFriccao(double friccao) {
 		this.friccao = friccao;
 	}
-	public boolean isGravidade() {
+	public String getGravidade() {
 		return gravidade;
 	}
-	public void setGravidade(boolean gravidade) {
+	public void setGravidade(String gravidade) {
 		this.gravidade = gravidade;
+	}
+	public String getRodape() {
+		rodape = "\\n; endings\\n\"}";
+		return rodape;
+	}
+	public void setRodape(String rodape) {
+		this.rodape = rodape;
 	}
 }
