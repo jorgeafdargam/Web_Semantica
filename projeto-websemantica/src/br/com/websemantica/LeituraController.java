@@ -81,6 +81,9 @@ public class LeituraController extends HttpServlet {
 		// recebe aplicação da gravidade
 		String gravidade = request.getParameter("inputGravidade");
 		configuracoes.setGravidade(gravidade);
+		// limita a exibição no resultado
+		int limitador = Integer.parseInt(request.getParameter("limitaExibicao"));
+		configuracoes.setLimitador(limitador);
 
 		// le arquivo
 		FileReader leitura = new FileReader(path + nome_arq);
@@ -103,7 +106,7 @@ public class LeituraController extends HttpServlet {
 		
 		//ATENÇÃO!
 		int y=0;
-		while (y <= 20) { // para que o programa funcione por completo substitua por while (true) {
+		while ( y <= 30 ) { // para que o programa funcione por completo substitua por while (true) {
 			y++;
 			// lê linha do arquivo no buffer de memória
 			String l = bL.readLine();

@@ -22,6 +22,7 @@ public class ConfiguracoesBeans {
 	private int repulsao = 2600;
 	private double friccao = 0.5;
 	private String gravidade = "false";
+	private int limitador;
 	
 	public String getNomeDataset() {
 		return nomeDataset;
@@ -123,5 +124,11 @@ public class ConfiguracoesBeans {
 	}
 	public void setRodape(String rodape) {
 		this.rodape = rodape;
+	}
+	public int getLimitador() {
+		return limitador;
+	}
+	public void setLimitador(int limitador) {
+		this.limitador = limitador;
 	}
 }

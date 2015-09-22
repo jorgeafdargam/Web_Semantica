@@ -35,7 +35,8 @@
 <label>Sujeito: </label><input type="text"  name="inputColorSuj" value="green" size ="10"> 
 <label>Predicado: </label><input type="text"  name="inputColorPred" value="red" size ="10"> 
 <label>Objeto: </label><input type="text"  name="inputColorObj" value="grey" size ="10"> <br/>
-<label>Caso a caixa ao lado esteja marcada a gravidade será aplicada: </label><input type="checkbox"  name="inputGravidade" value="true" checked> <br/><br/><br/>
+<label>Caso a caixa ao lado esteja marcada a gravidade será aplicada: </label><input type="checkbox"  name="inputGravidade" value="true" checked> <br/>
+<label>Limitador de exibições na pesquisa: </label><input type="text" name="limitaExibicao" value="30" size ="7"> <br/><br/>
 
 <p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p><br/>
 <label>Especifique a porta utilizada pelo BD Virtuoso: </label>
