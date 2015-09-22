@@ -16,12 +16,13 @@
 
 			<div class="secundario secundario1">
 				<div class="secundario2">
-					<span class="span">Escolha abaixo as combinações de busca no dataset:</span><br/>
+					<p class="align_center"><span class="span">Escolha abaixo as combinações de busca no dataset:</span></p>
 					<p class="align_center"><span class="span"><%=request.getAttribute("arquivo") %></span></p>
+					<p class="align_center"><span class="span">Existem até <%=request.getAttribute("contador") %> opções de buscas exclusivas em cada campo.</span></p>
 				</div>
-				<br> <br> <br> <br>
+				<div class="formulario">
 				<form action="busca">
-					<p>Sujeito:</p>
+					<br><p>Sujeito:</p>
 					<select name="sujeito" id="sujeito" >
 						<c:forEach var="sujeito" items="${requestScope.sujeito}">
 							<option value="${sujeito}" >${sujeito}</option>
@@ -45,10 +46,11 @@
 					<input type="submit" class="btn btn1" value="BUSCAR" /> <input
 						type="reset" class="btn btn1" value="LIMPAR" /> <input
 						type="button" class="btn btn1"
-						onClick="location.href='http://localhost:8080/projeto-websemantica/entradaBusca.jsp'"
+						onClick="location.href='http://localhost:8080/projeto-websemantica/Busca.jsp'"
 						value="VOLTAR" />
 					</p>
 				</form>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -105,9 +105,9 @@ public class LeituraController extends HttpServlet {
 		listaNomes_obj.add(objeto);
 		
 		//ATENÇÃO!
-		int y=0;
-		while ( y <= 30 ) { // para que o programa funcione por completo substitua por while (true) {
-			y++;
+		int cont=0;
+		while ( cont < limitador ) { // para que o programa funcione por completo substitua por while (true) {
+			cont++;
 			// lê linha do arquivo no buffer de memória
 			String l = bL.readLine();
 			if (l == null){
@@ -134,6 +134,7 @@ public class LeituraController extends HttpServlet {
 		request.setAttribute("predicado", listaNomes_pred);
 		request.setAttribute("objeto", listaNomes_obj);
 		request.setAttribute("arquivo", nome_arq);
+		request.setAttribute("contador", cont);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("entradaSPO.jsp");  
 		dispatcher.forward(request, response); 

@@ -3,9 +3,13 @@ package br.com.websemantica;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonMontadorPredicado {
+	
+	CoresBean corHex = new CoresBean();
+	
 	// ArrayList virt é uma lista de objetos BuscaBean
 	List<BuscaBean> virt;
 
@@ -41,12 +45,13 @@ public class JsonMontadorPredicado {
 			bE.write(tripla.getObjeto());
 			bE.write("\\n");
 			// atribuição de cores
+			String corSO = corHex.getCor();
 			bE.write(tripla.getSujeito());
-			bE.write(" {color:" + configuracoes.getCor_sujeito() + "}\\n");
+			bE.write(" {color:" + corSO + "}\\n");
 			bE.write(tripla.getPredicado());
-			bE.write(" {color:" + configuracoes.getCor_predicado() + "}\\n");
+			bE.write(" {color:red}\\n");
 			bE.write(tripla.getObjeto());
-			bE.write(" {color:" + configuracoes.getCor_objeto() + "}\\n\\n");
+			bE.write(" {color:" + corSO + "}\\n\\n");
 		}
 		// rodapé do arquivo json
 		bE.write(configuracoes.getRodape());

@@ -17,19 +17,22 @@ h1{
 	width:100%;
 	z-index:200;
 }
+
+.formulario {
+	margin-top: 85px;	
+}
+
 #principal{
 	 position:relative;
 	 z-index:200;
 	 top:31px;
 	 width:1200px;
-	 text-align:left;
 	 margin:0 auto;
 }
 .imagem{
 	position:absolute;
 	z-index:10016;
 	left:260px;
-	top:100px;
 	width:640px;
 	height:74px;
 	border:0px;
@@ -38,7 +41,7 @@ h1{
 	position:absolute;
 	z-index:10012;
 	left:335px;
-	top:240px;
+	top:70px;
 	width:500px;
 	height:70px;
 	border:0px;
@@ -54,7 +57,7 @@ h1{
 }
 span{
 	 font-family:Arial;
-	 font-size:20px;
+	 font-size:16px;
 	 font-weight:normal;
 	 color:#0445c9;
 }
