@@ -47,11 +47,11 @@ public class JsonMontadorPredicado {
 			// atribuição de cores
 			String corSO = corHex.getCor();
 			bE.write(tripla.getSujeito());
-			bE.write(" {color:" + corSO + "}\\n");
+			bE.write(" {color:#" + corSO + "}\\n");
 			bE.write(tripla.getPredicado());
 			bE.write(" {color:red}\\n");
 			bE.write(tripla.getObjeto());
-			bE.write(" {color:" + corSO + "}\\n\\n");
+			bE.write(" {color:#" + corSO + "}\\n\\n");
 		}
 		// rodapé do arquivo json
 		bE.write(configuracoes.getRodape());

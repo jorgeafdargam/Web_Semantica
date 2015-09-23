@@ -13,7 +13,7 @@ public class ImportaRdf {
 		try {
 			System.out.println("Lendo arquivo dataset.");
 			/* inserir o caminho do arquivo dataset */
-			FileReader leitura = new FileReader("/home/jorge/Documentos/geonames_links.nt");
+			FileReader leitura = new FileReader("/home/dell/Documentos/geonames_links_reduzido.nt");
 			System.out.println("Arquivo dataset lido.");
 			System.out.println("Abrinfo buffer de memória para leitura do dataset.");
 			BufferedReader bL = new BufferedReader(leitura);
@@ -21,7 +21,7 @@ public class ImportaRdf {
 			System.out.println("Conectando ao Banco de Dados Virtuoso.");
 			/* especificar nome do grafo a ser criado no Virtuoso (geonames). usuário (dba) e senha (dba). */
 			/* não alterar a conexão do BD Virtuoso */
-			VirtGraph set = new VirtGraph ("geonames","jdbc:virtuoso://localhost:1111", "dba", "jorge140");
+			VirtGraph set = new VirtGraph ("geonames","jdbc:virtuoso://localhost:1111", "dba", "dba");
 			set.getTransactionHandler().begin();
 			System.out.println("Banco de dados conectado. Iniciando transferência do dataset.");
 			int cont=0;
