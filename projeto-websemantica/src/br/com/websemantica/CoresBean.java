@@ -1,3 +1,5 @@
+// Gerador aleatório de cor hexadecimal
+
 package br.com.websemantica;
 
 import java.util.ArrayList;
@@ -10,17 +12,27 @@ public class CoresBean {
 	private Random gerador = new Random();
 	
 	public CoresBean(){
-		cor.add("00");
-		cor.add("33");
-		cor.add("66");
-		cor.add("99");
-		cor.add("AA");
-		cor.add("CC");
-		cor.add("FF");
+		cor.add("0");
+		cor.add("1");
+		cor.add("2");
+		cor.add("3");
+		cor.add("4");
+		cor.add("5");
+		cor.add("6");
+		cor.add("7");
+		cor.add("8");
+		cor.add("9");
+		cor.add("A");
+		cor.add("B");
+		cor.add("C");
+		cor.add("D");
+		cor.add("E");
+		cor.add("F");
 	}
 		
 	public String getCor (){
-		corHex = cor.get(gerador.nextInt(7)) + cor.get(gerador.nextInt(7)) + cor.get(gerador.nextInt(7));
+		corHex = cor.get(gerador.nextInt(15)) + cor.get(gerador.nextInt(15)) + cor.get(gerador.nextInt(15)) + 
+				cor.get(gerador.nextInt(15)) + cor.get(gerador.nextInt(15)) + cor.get(gerador.nextInt(15));
 		return corHex;
 	}
 }
