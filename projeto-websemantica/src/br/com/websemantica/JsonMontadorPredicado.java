@@ -36,21 +36,69 @@ public class JsonMontadorPredicado {
 		// escreve sujeito no arquivo JSON de saída
 		for (BuscaBean tripla : virt) {
 			// atribuição de relacionamentos
-			bE.write(tripla.getSujeito());
+			
+			// SUJEITO
+			// a rotina abaixo captura somente o sujeito descartando a IRI
+			int a = 0;
+			int j = 0;
+			String suj = tripla.getSujeito();
+			for ( int i=0; i<suj.length(); i++ ) {
+				char c = suj.charAt(i);
+					if ( c == '/' ) {
+						j++;
+						if ( j == 4 ){
+							a=i;
+							break;
+						}
+					}
+			}
+			String suj2 = suj.substring(++a, suj.length());
+			bE.write(suj2);
 			bE.write(" -> ");
-			bE.write(tripla.getPredicado());
+			
+			// PREDICADO
+			// esta rotina obtém a posição do caracter # com a finalidade de 
+			// isolar a informação do predicado, descartando o restante da IRI
+			int b = 0;
+			String pred = tripla.getPredicado();
+			for ( int i=0; i<pred.length(); i++ ) {
+				char c = pred.charAt(i);
+					if ( c=='#' ) {
+						b=i;
+						break;
+					}
+			}
+			String pred2 = pred.substring(++b, pred.length());
+			bE.write(pred2);
 			bE.write("\\n");
-			bE.write(tripla.getPredicado());
+			bE.write(pred2);
 			bE.write(" -> ");
-			bE.write(tripla.getObjeto());
+			
+			// OBJETO
+			int d = 0;
+			int k = 0;
+			String obj = tripla.getObjeto();
+			for ( int i=0; i<obj.length(); i++ ) {
+				char c = obj.charAt(i);
+					if ( c == '/' ) {
+						k++;
+						if ( k == 3 ){
+							d=i;
+							break;
+						}
+					}
+			}
+			String obj2 = obj.substring(++d, (obj.length() - 1));
+			bE.write(obj2);
 			bE.write("\\n");
+	
 			// atribuição de cores
 			String corSO = corHex.getCor();
-			bE.write(tripla.getSujeito());
+			bE.write(suj2);
 			bE.write(" {color:#" + corSO + "}\\n");
-			bE.write(tripla.getPredicado());
+			bE.write(pred2);
 			bE.write(" {color:red}\\n");
-			bE.write(tripla.getObjeto());
+			bE.write(obj2);
 			bE.write(" {color:#" + corSO + "}\\n\\n");
 		}
 		// rodapé do arquivo json
