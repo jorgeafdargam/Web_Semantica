@@ -72,9 +72,13 @@ public class ConfiguracoesBeans {
 	public void setGrafoVirtuoso(String grafoVirtuoso) {
 		this.grafoVirtuoso = grafoVirtuoso;
 	}
-	public String getCabecalho() {
+	public String getCabecalho(String tipo) {
+		if ( tipo.equals("predicado") ) {
+			cabecalho = "{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":" + repulsao + ",\"friction\":" + friccao + ",\"stiffness\":" + tensao + ",\"gravity\":" + gravidade + "},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n; by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n; Código das cores:\\n; Sujeito e Objeto possuem as mesmas cores. \\n; Predicado: red\\n\\n";
+			return cabecalho;
+		}
 		cabecalho = "{\"_id\":\"semantic-search-web\",\"_rev\":\"1-b61c63c4e7e2c0fe911f89c1330491e2\",\"sys\":{\"repulsion\":" + repulsao + ",\"friction\":" + friccao + ",\"stiffness\":" + tensao + ",\"gravity\":" + gravidade + "},\"src\":\";\\n; FAETERJ-Rio (2015)\\n; Search Semantic Web\\n; by Jorge Antonio F. Dargam\\n; by Marcio Pacheco de Lima\\n;\\n; Mecanismo de busca em dados\\n; dispostos em ontologia semântica \\n\\n; Código das cores:\\n; Sujeito: " + cor_sujeito + "\\n; Predicado: " + cor_predicado + "\\n; Objeto: " + cor_objeto + "\\n\\n";
-		return cabecalho;
+		return cabecalho;		
 	}
 	public String getCor_sujeito() {
 		return cor_sujeito;

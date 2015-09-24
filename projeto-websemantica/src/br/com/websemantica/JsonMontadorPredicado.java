@@ -32,7 +32,7 @@ public class JsonMontadorPredicado {
 		// abre buffer de memória para escrita que será transferido direto para o arquivo criado acima
 		BufferedWriter bE = new BufferedWriter(escrita);
 		// cabeçalho do arquivo json
-		bE.write(configuracoes.getCabecalho());
+		bE.write(configuracoes.getCabecalho("predicado"));
 		// escreve sujeito no arquivo JSON de saída
 		for (BuscaBean tripla : virt) {
 			// atribuição de relacionamentos
