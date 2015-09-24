@@ -45,8 +45,16 @@
 <input type="text"  name="inputUser" value="dba" size ="10"> <br/>
 <label>Especifique a senha de acesso ao BD Virtuoso: </label>
 <input type="password"  name="inputPassword" value="dba" size ="10"> <br/><br/>
-
-<p class="align_center"><input type="submit" value="ENVIAR"></p>
+<p class="align_center"><input type="submit" value="PESQUISAR NO GRAFO"></p>
+</form>
+<br/>
+<hr>
+</form>
+<br/>
+<form action="InserirDataset.jsp">
+<label>Se desejar inserir novo grafo no BD Virtuoso, clique no botão abaixo. </label>
+<br/><br/>
+<p class="align_center"><input type="submit" value="INSERIR NOVO GRAFO" /></p>
 </form>
 </div>
 			</div>

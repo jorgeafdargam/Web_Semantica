@@ -24,8 +24,8 @@
 <label>Especifique o caminho onde está o arquivo dataset</label><br/>
 <input type="text"  name="inputPath" value="/home/dell/Documentos/" size ="40"> <br/>
 <label>Selecione o arquivo dataset no caminho acima</label><br/>
-<input type="file"  name="inpuFile" accept=".nt"><br/>
-
+<input type="file"  name="inpuFile" accept=".nt">
+<br/><br/>
 <p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p><br/>
 <label>Especifique a porta utilizada pelo BD Virtuoso: </label>
 <input type="text"  name="inputPorta" value="1111" size ="10"> <br/>
@@ -36,8 +36,15 @@
 <label>Especifique o nome do grafo a ser inserido no BD Virtuoso: </label>
 <input type="text"  name="inputGrafo" value="geonames" size ="20"> <br/>
 <br/>
-
-<p class="align_center"><input type="submit" value="ENVIAR"></p>
+<p class="align_center"><input type="submit" value="INSERIR GRAFO"></p>
+<br/>
+<hr>
+</form>
+<form action="Busca.jsp">
+<br/>
+<label>Se já houver grafo inserido no BD Virtuoso, clique no botão abaixo para realizar a pesquisa. </label>
+<br/>
+<p class="align_center"><input type="submit" value="PESQUISAR" /></p>
 </form>
 </div>
 			</div>
@@ -51,17 +58,12 @@
 					<p>- Indique o caminho do seu arquivo dataset onde será realizada a busca. Exemplo em ambiente Linux: /home/jorge/Documentos/</p>
 					<p>- Indique o nome do seu arquivo dataset. Exemplo: geonames_links.nt</p>
 					<br/>
-					<p class="align_center">CONFIGURAÇÕES DO ARQUIVO JSON DE SAÍDA</p>
-					<p>- Indique o caminho do seu arquivo json que irá gerar o gráfico. O arquivo deverá estar na pasta /arbor/demos/halfviz/library/ do framework Arbor.js. Exemplo em ambiente Linux: /var/www/html/arbor/demos/halfviz/library/</p>
-					<p>- Indique o nome do seu arquivo json. Exemplo: texto.json</p>
-					<p>- Indique as cores, em formato texto ou hexadecimal, do sujeito, predicado e objeto a ser exibidas no gráfico. Exemplo: red ou #F50824</p>
-					<p>- Clique <a href="http://html-color-codes.info/Codigos-de-Cores-HTML/" target="_blank">aqui</a> para acessar um aplicativo que fornece o código hexadecimal das cores.</p>
-					<br/>
 					<p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p>
 					<p>- Clique <a href="http://localhost:8890/" target="_blank">aqui</a> para verificar se seu BD Virtuoso está inicializado.</p>
 					<p>- Indique a porta utilizada pelo BD Virtuoso. A porta padrão é 1111.</p>
 					<p>- Indique o nome de usuário para fazer acesso ao BD Virtuoso.</p>
 					<p>- Indique a senha para fazer acesso ao BD Virtuoso.</p>
+					<p>- Indique o nome do grafo no BD Virtuoso. No Conductor o caminho para visualizar o grafo inserido é Linked Data / Graphs.</p>
 				</div>
 			</div>
 			</div>
