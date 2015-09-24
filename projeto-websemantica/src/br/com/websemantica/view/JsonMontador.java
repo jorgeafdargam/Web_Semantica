@@ -1,4 +1,4 @@
-package br.com.websemantica;
+package br.com.websemantica.view;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -6,17 +6,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonMontadorPredicado {
-	
-	CoresBean corHex = new CoresBean();
-	
+import br.com.websemantica.bean.BuscaBean;
+import br.com.websemantica.bean.ConfiguracoesBeans;
+import br.com.websemantica.control.LeituraController;
+
+public class JsonMontador {
 	// ArrayList virt é uma lista de objetos BuscaBean
 	List<BuscaBean> virt;
 
 	// obtem as configurações do sistema
 	ConfiguracoesBeans configuracoes = LeituraController.getConfiguracoes();
 
-	public JsonMontadorPredicado(List<BuscaBean> virt) throws IOException {
+	public JsonMontador(List<BuscaBean> virt) throws IOException {
 		this.virt = virt;
 		this.monta();
 	}
@@ -32,7 +33,7 @@ public class JsonMontadorPredicado {
 		// abre buffer de memória para escrita que será transferido direto para o arquivo criado acima
 		BufferedWriter bE = new BufferedWriter(escrita);
 		// cabeçalho do arquivo json
-		bE.write(configuracoes.getCabecalho("predicado"));
+		bE.write(configuracoes.getCabecalho("comum"));
 		// escreve sujeito no arquivo JSON de saída
 		for (BuscaBean tripla : virt) {
 			// atribuição de relacionamentos
@@ -91,15 +92,14 @@ public class JsonMontadorPredicado {
 			String obj2 = obj.substring(++d, (obj.length() - 1));
 			bE.write(obj2);
 			bE.write("\\n");
-	
+			
 			// atribuição de cores
-			String corSO = corHex.getCor();
 			bE.write(suj2);
-			bE.write(" {color:#" + corSO + "}\\n");
+			bE.write(" {color:" + configuracoes.getCor_sujeito() + "}\\n");
 			bE.write(pred2);
-			bE.write(" {color:red}\\n");
+			bE.write(" {color:" + configuracoes.getCor_predicado() + "}\\n");
 			bE.write(obj2);
-			bE.write(" {color:#" + corSO + "}\\n\\n");
+			bE.write(" {color:" + configuracoes.getCor_objeto() + "}\\n\\n");
 		}
 		// rodapé do arquivo json
 		bE.write(configuracoes.getRodape());

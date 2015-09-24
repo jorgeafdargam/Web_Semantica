@@ -1,6 +1,6 @@
 // Gerador aleatório de cor hexadecimal
 
-package br.com.websemantica;
+package br.com.websemantica.bean;
 
 import java.util.ArrayList;
 import java.util.Random;

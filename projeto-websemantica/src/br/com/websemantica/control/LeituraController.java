@@ -1,6 +1,6 @@
 // realiza a leitura do arquivo enviado por Busca.jsp
 
-package br.com.websemantica;
+package br.com.websemantica.control;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -18,6 +18,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.com.websemantica.bean.ConfiguracoesBeans;
 
 @WebServlet("/LeituraController")
 public class LeituraController extends HttpServlet {

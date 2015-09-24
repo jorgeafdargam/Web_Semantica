@@ -1,4 +1,4 @@
-package br.com.websemantica;
+package br.com.websemantica.control;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -12,6 +12,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.com.websemantica.bean.BuscaBean;
+import br.com.websemantica.model.BuscaModel;
+import br.com.websemantica.view.JsonMontador;
+import br.com.websemantica.view.JsonMontadorPredicado;
 
 
 @WebServlet("/busca")

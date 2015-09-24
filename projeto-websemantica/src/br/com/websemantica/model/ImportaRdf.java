@@ -1,4 +1,4 @@
-package br.com.websemantica;
+package br.com.websemantica.model;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

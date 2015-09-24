@@ -1,4 +1,4 @@
-package br.com.websemantica;
+package br.com.websemantica.model;
 
 
 import java.util.ArrayList;
@@ -16,7 +16,9 @@ import com.hp.hpl.jena.rdf.model.Model;
 import virtuoso.jena.driver.VirtGraph;
 import virtuoso.jena.driver.VirtuosoQueryExecution;
 import virtuoso.jena.driver.VirtuosoQueryExecutionFactory;
-import br.com.websemantica.ConfiguracoesBeans;
+import br.com.websemantica.bean.BuscaBean;
+import br.com.websemantica.bean.ConfiguracoesBeans;
+import br.com.websemantica.control.LeituraController;
 
 public class BuscaModel {
 	

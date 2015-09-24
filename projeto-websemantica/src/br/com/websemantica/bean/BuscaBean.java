@@ -1,4 +1,4 @@
-package br.com.websemantica;
+package br.com.websemantica.bean;
 
 public class BuscaBean {
 	private String sujeito;
