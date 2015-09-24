@@ -18,7 +18,7 @@
 			<div class="corpo">
 			<div class="col_2">
 				<div class="col_2111">
-<form method="post" action="LeituraController" >
+<form method="post" action="ImportaDataset" >
 
 <p class="align_center">CONFIGURAÇÕES DO DATASET</p><br/>
 <label>Especifique o caminho onde está o arquivo dataset</label><br/>
@@ -26,25 +26,16 @@
 <label>Selecione o arquivo dataset no caminho acima</label><br/>
 <input type="file"  name="inpuFile" accept=".nt"><br/>
 
-<br/><p class="align_center">CONFIGURAÇÕES DO ARQUIVO JSON DE SAÍDA</p><br/>
-<label>Especifique o caminho do arquivo json de saída</label><br/>
-<input type="text"  name="inputPathOut" value="/opt/lampp/htdocs/arbor/demos/halfviz/library/" size ="40"> <br/>
-<label>Especifique o nome do arquivo json de saída</label><br/>
-<input type="text"  name="inpuFileOut" value="third-planet-from-altair2.json" size ="40"> <br/>
-<label>Especifique as identificações por cores:</label><br/>
-<label>Sujeito: </label><input type="text"  name="inputColorSuj" value="green" size ="5"> 
-<label>Predicado: </label><input type="text"  name="inputColorPred" value="red" size ="5"> 
-<label>Objeto: </label><input type="text"  name="inputColorObj" value="grey" size ="5"> <br/>
-<label>Caso a caixa ao lado esteja marcada a gravidade será aplicada: </label><input type="checkbox"  name="inputGravidade" value="true" checked> <br/>
-<label>Limitador de exibições na pesquisa: </label><input type="text" name="limitaExibicao" value="20" size ="5"> <br/><br/>
-
 <p class="align_center">CONFIGURAÇÕES DO BD VIRTUOSO</p><br/>
 <label>Especifique a porta utilizada pelo BD Virtuoso: </label>
 <input type="text"  name="inputPorta" value="1111" size ="10"> <br/>
 <label>Especifique o usuário de acesso ao BD Virtuoso: </label>
 <input type="text"  name="inputUser" value="dba" size ="10"> <br/>
 <label>Especifique a senha de acesso ao BD Virtuoso: </label>
-<input type="password"  name="inputPassword" value="dba" size ="10"> <br/><br/>
+<input type="password"  name="inputPassword" value="dba" size ="10"> <br/>
+<label>Especifique o nome do grafo a ser inserido no BD Virtuoso: </label>
+<input type="text"  name="inputGrafo" value="geonames" size ="20"> <br/>
+<br/>
 
 <p class="align_center"><input type="submit" value="ENVIAR"></p>
 </form>
