@@ -70,10 +70,11 @@
 				</c:forEach>
 			</table>
 			<div class="botao botaoSPO">
-				<a class="align_center"><input type="button" class="btn btn1"
+				<p class="align_center">
+				<a><input type="button" class="btn btn1"
 					onClick="location.href='http://localhost:8080/projeto-websemantica/Busca.jsp'"
-					value="Nova Busca"></input>
-				</a>
+					value="Nova Busca"></input> </a>
+				</p>
 			</div>
 			<form method="post" action="busca" Id="f1">
 				<input type="hidden" name="sujeito" id="sujeito"> <input
@@ -90,10 +91,11 @@
 			</form>
 
 			<form method="post" action="busca" Id="f3">
-				<input type="hidden" name="objeto" id="objeto"> <input
-					type="hidden" name="sujeito" value=""> <input type="hidden"
-					name="predicado" value=""> <input type="hidden" name="uri"
-					value="">
+				<input type="hidden" name="objeto" id="objeto"> 
+				<input type="hidden" name="sujeito" value=""> 
+				<input type="hidden" name="predicado" value=""> 
+				<input type="hidden" name="uri" value="">
 			</form>
-		</div><br/>
-<jsp:include page="Busca_footer.inc" />
+		</div>
+		<br />
+		<jsp:include page="Busca_footer.inc" />
